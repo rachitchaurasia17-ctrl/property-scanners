@@ -82,17 +82,17 @@ function Nav({ onContact }) {
           backdropFilter: solid ? "blur(12px)" : "none",
           WebkitBackdropFilter: solid ? "blur(12px)" : "none",
           borderBottom: solid ? "1px solid var(--line)" : "1px solid transparent",
-          transition: "background 250ms ease, border-color 250ms ease",
+          transition: "background 400ms cubic-bezier(0.16, 1, 0.3, 1), border-color 400ms cubic-bezier(0.16, 1, 0.3, 1)",
         }}
       >
         <div className="container" style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <a href="#top" onClick={() => setMobileOpen(false)} style={{ display: "flex", alignItems: "center", gap: 14, zIndex: 1 }}>
             <Crown dark={onDark} />
             <div style={{ lineHeight: 1.05 }}>
-              <div className="clash" style={{ fontSize: 20, letterSpacing: "-0.03em", color: navInk, transition: "color 250ms ease" }}>
-                Sachdeva <span style={{ fontFamily: "Gambarino, Georgia, serif", fontStyle: "italic", fontWeight: 400, letterSpacing: "-0.02em" }}>Real Estate</span>
+              <div className="clash" style={{ fontSize: 20, letterSpacing: "-0.03em", color: navInk, transition: "color 400ms cubic-bezier(0.16, 1, 0.3, 1)" }}>
+                Property Scanners <span style={{ fontFamily: "Gambarino, Georgia, serif", fontStyle: "italic", fontWeight: 400, letterSpacing: "-0.02em" }}>Real Estate</span>
               </div>
-              <div className="uc" style={{ fontSize: 10, color: navMute, letterSpacing: "0.16em", transition: "color 250ms ease" }}>Property Experts · Mohali</div>
+              <div className="uc" style={{ fontSize: 10, color: navMute, letterSpacing: "0.16em", transition: "color 400ms cubic-bezier(0.16, 1, 0.3, 1)" }}>Property Experts · Mohali</div>
             </div>
           </a>
 
@@ -106,7 +106,7 @@ function Nav({ onContact }) {
               >{label}</a>
             ))}
             <button onClick={onContact} className="uc"
-              style={{ fontSize: 12, letterSpacing: "0.12em", padding: "12px 22px", borderRadius: 999, border: "1px solid " + navInk2, background: "transparent", color: navInk2, cursor: "pointer", transition: "background 200ms ease, color 200ms ease, border-color 250ms ease" }}
+              style={{ fontSize: 12, letterSpacing: "0.12em", padding: "12px 22px", borderRadius: 999, border: "1px solid " + navInk2, background: "transparent", color: navInk2, cursor: "pointer", transition: "background 200ms ease, color 200ms ease, border-color 400ms cubic-bezier(0.16, 1, 0.3, 1)" }}
               onMouseEnter={(e) => { e.currentTarget.style.background = navInk2; e.currentTarget.style.color = onDark ? "#111" : "var(--bg)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = navInk2; }}
             >Schedule a Viewing</button>
@@ -166,7 +166,7 @@ function Crown({ dark = true }) {
   return (
     <svg width="38" height="38" viewBox="0 0 40 40" fill="none">
       <circle cx="20" cy="20" r="19" stroke={stroke} strokeWidth="1" />
-      <path d="M10 22 L14 14 L20 19 L26 14 L30 22 L28 26 L12 26 Z" fill="#c89a3c" />
+      <path d="M10 22 L14 14 L20 19 L26 14 L30 22 L28 26 L12 26 Z" fill="#D4AF37" />
       <text x="20" y="24" textAnchor="middle" fontFamily="Clash Display, sans-serif" fontWeight="700" fontSize="9" fill={stroke} letterSpacing="-0.02em">SR</text>
     </svg>
   );
@@ -251,7 +251,7 @@ function Hero({ active }) {
         <div className="hero-top hero-fade" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 24, flexWrap: "wrap" }}>
           <div style={{ maxWidth: 340 }}>
             <div className="uc" style={{ fontSize: 10, color: "rgba(255,255,255,0.78)", letterSpacing: "0.22em", marginBottom: 14, display: "inline-flex", alignItems: "center", gap: 10 }}>
-              <span style={{ width: 28, height: 1, background: "#c89a3c", display: "inline-block" }} />
+              <span style={{ width: 28, height: 1, background: "#D4AF37", display: "inline-block" }} />
               Property Experts · Mohali
             </div>
             <p style={{ margin: 0, fontSize: 14, color: "rgba(255,255,255,0.86)", lineHeight: 1.55, maxWidth: 300 }}>
@@ -271,11 +271,11 @@ function Hero({ active }) {
             <span className="hero-word w-1">PROPERTY</span>
           </div>
           <div className="clash hero-headline-2" style={{ fontSize: "clamp(60px, 13.5vw, 270px)", letterSpacing: "-0.05em", lineHeight: 0.92, color: "#ffffff", fontWeight: 500, display: "flex", alignItems: "baseline", gap: "0.18em" }}>
-            <span className="hero-word w-2" style={{ fontFamily: "Gambarino, Georgia, serif", fontStyle: "italic", fontWeight: 400, letterSpacing: "-0.04em", fontSize: "0.92em", color: "#c89a3c" }}>as</span>
+            <span className="hero-word w-2" style={{ fontFamily: "Gambarino, Georgia, serif", fontStyle: "italic", fontWeight: 400, letterSpacing: "-0.04em", fontSize: "0.92em", color: "#D4AF37" }}>as</span>
             <span className="hero-word w-3">CAPITAL.</span>
           </div>
           <div className="hero-word hero-tagline" style={{ marginTop: 18, display: "inline-flex", alignItems: "center", gap: 14, fontFamily: "Gambarino, Georgia, serif", fontStyle: "italic", fontSize: 18, color: "rgba(244,237,227,0.82)", letterSpacing: "-0.005em" }}>
-            <span style={{ width: 36, height: 1, background: "#c89a3c", display: "inline-block" }} />
+            <span style={{ width: 36, height: 1, background: "#D4AF37", display: "inline-block" }} />
             Expert property guidance · Trusted since inception.
           </div>
         </div>
@@ -434,7 +434,7 @@ function Manifesto() {
           We do not sell <em>square feet</em>. We place <em>capital</em> where the city is going — quietly, between long-standing buyers and sellers, on titles that arrive at the closing table already clean.
         </blockquote>
         <div className="manifesto-credit">
-          <span className="manifesto-sig">— Sachdeva Real Estate</span>
+          <span className="manifesto-sig">— Property Scanners</span>
           <span className="manifesto-role">Property Experts · Mohali</span>
         </div>
         <div className="manifesto-grid">
@@ -597,8 +597,8 @@ function Portfolio({ properties, onOpen }) {
         {hidden > 0 && (
           <div style={{ marginTop: 36, display: "flex", justifyContent: "center" }}>
             <button onClick={() => setShowAll(true)} className="uc"
-              style={{ fontSize: 12, letterSpacing: "0.18em", padding: "16px 32px", borderRadius: 999, border: "1px solid var(--accent)", background: "transparent", color: "var(--ink)", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 12, transition: "background 250ms ease, transform 250ms ease" }}
-              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(200,154,60,0.08)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+              style={{ fontSize: 12, letterSpacing: "0.18em", padding: "16px 32px", borderRadius: 999, border: "1px solid var(--accent)", background: "transparent", color: "var(--ink)", cursor: "pointer", display: "inline-flex", alignItems: "center", gap: 12, transition: "background 400ms cubic-bezier(0.16, 1, 0.3, 1), transform 400ms cubic-bezier(0.16, 1, 0.3, 1)" }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = "rgba(212,175,55,0.08)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
               View {hidden} more {hidden === 1 ? "mandate" : "mandates"} <span style={{ fontSize: 14 }}>↓</span>
@@ -691,7 +691,7 @@ function ListingRow({ p, idx, onOpen }) {
         </div>
       )}
       <div className="clash mono-num" style={{ fontSize: wide ? 22 : 16, letterSpacing: "-0.03em", textAlign: "right", fontWeight: 600, whiteSpace: "nowrap" }}>{p.price}</div>
-      <div style={{ width: 36, height: 36, borderRadius: 999, border: "1px solid " + (hover ? "rgba(242,242,242,0.5)" : "var(--line)"), display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, marginLeft: "auto", transition: "all 250ms ease", transform: hover ? "rotate(-45deg)" : "rotate(0deg)", flexShrink: 0 }}>→</div>
+      <div style={{ width: 36, height: 36, borderRadius: 999, border: "1px solid " + (hover ? "rgba(242,242,242,0.5)" : "var(--line)"), display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, marginLeft: "auto", transition: "all 400ms cubic-bezier(0.16, 1, 0.3, 1)", transform: hover ? "rotate(-45deg)" : "rotate(0deg)", flexShrink: 0 }}>→</div>
     </li>
   );
 }
@@ -758,7 +758,7 @@ function DetailContent({ p, onClose, deepLinked }) {
 
         <ImageReveal src={p.hero} alt={p.title} />
 
-        <div className="spec-strip" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0, border: "1px solid var(--line)", borderRadius: 6, marginTop: 24, overflow: "hidden", background: "var(--paper)" }}>
+        <div className="spec-strip" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0, border: "1px solid var(--line)", borderRadius: 8, marginTop: 24, overflow: "hidden", background: "var(--paper)" }}>
           <Spec label="Built-up" v={p.builtUp} />
           <Spec label="Plot" v={p.plotSize} />
           <Spec label="Facing" v={p.facing} />
@@ -789,7 +789,7 @@ function ImageReveal({ src, alt }) {
     return () => clearTimeout(t);
   }, []);
   return (
-    <div style={{ marginTop: 28, aspectRatio: "16/10", overflow: "hidden", borderRadius: 6, background: "#1a1714", position: "relative" }}>
+    <div style={{ marginTop: 28, aspectRatio: "16/10", overflow: "hidden", borderRadius: 8, background: "#1a1714", position: "relative" }}>
       <img src={src} alt={alt} className={"reveal " + (vis ? "in" : "")} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
     </div>
   );
@@ -858,7 +858,7 @@ function Compliance({ p }) {
         <ComplianceCard h="Title" v="Clear, single owner" note="Fard, jamabandi and mutation verified by the desk" />
         <ComplianceCard h="Dues" v="All cleared" note="Property tax · Electricity · Water · Maintenance" />
       </div>
-      <div style={{ marginTop: 24, padding: 24, background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 6 }}>
+      <div style={{ marginTop: 24, padding: 24, background: "var(--paper)", border: "1px solid var(--line)", borderRadius: 8 }}>
         <div className="uc" style={{ fontSize: 10, letterSpacing: "0.16em", color: "var(--mute)", marginBottom: 8 }}>Desk Note</div>
         <p style={{ margin: 0, fontSize: 15, color: "var(--ink-2)", lineHeight: 1.6 }}>
           A complete title memo (12 pages) and a physical inspection report are released to a buyer on confirmation of intent. Token cheques are held in escrow with our retained law firm at Chandigarh District Court.
@@ -870,7 +870,7 @@ function Compliance({ p }) {
 
 function ComplianceCard({ h, v, note }) {
   return (
-    <div style={{ border: "1px solid var(--line)", padding: "20px 20px", borderRadius: 6, background: "var(--paper)" }}>
+    <div style={{ border: "1px solid var(--line)", padding: "20px 20px", borderRadius: 8, background: "var(--paper)" }}>
       <div className="uc" style={{ fontSize: 10, letterSpacing: "0.16em", color: "var(--mute)", marginBottom: 10 }}>{h}</div>
       <div className="clash" style={{ fontSize: "clamp(16px,2.5vw,22px)", letterSpacing: "-0.02em", fontWeight: 600 }}>{v}</div>
       <div style={{ marginTop: 8, fontSize: 13, color: "var(--mute)" }}>{note}</div>
@@ -904,7 +904,7 @@ function Viewing({ p }) {
           </div>
         </form>
       ) : (
-        <div style={{ marginTop: 24, padding: 32, border: "1px solid var(--ink-2)", borderRadius: 6, background: "var(--paper)" }}>
+        <div style={{ marginTop: 24, padding: 32, border: "1px solid var(--ink-2)", borderRadius: 8, background: "var(--paper)" }}>
           <div className="uc" style={{ fontSize: 10, letterSpacing: "0.16em", color: "var(--mute)", marginBottom: 10 }}>Received</div>
           <div className="clash" style={{ fontSize: "clamp(22px,4vw,28px)", letterSpacing: "-0.03em", fontWeight: 600 }}>Thank you. The desk will revert shortly.</div>
           <div style={{ marginTop: 12, color: "var(--mute)", fontSize: 14 }}>Reference: VR-{p.code}-{Math.floor(Math.random() * 9000 + 1000)}</div>
@@ -992,7 +992,7 @@ function Principal() {
         <div className="principal-grid">
           <div>
             <div className="principal-frame">
-              <img src="assets/sachdeva-about.jpg" alt="Sachdeva Real Estate office interior" />
+              <img src="assets/ps-about.jpg" alt="Property Scanners office interior" />
             </div>
             <div className="principal-credits">
               <div className="principal-credit">
@@ -1015,7 +1015,7 @@ function Principal() {
           </div>
           <div className="principal-right">
             <div className="manifesto-eyebrow" style={{ marginBottom: 0 }}>Our Expertise · Mohali Tri-City</div>
-            <h2 className="principal-name">Sachdeva <em>Real Estate</em></h2>
+            <h2 className="principal-name">Property Scanners <em>Real Estate</em></h2>
             <p className="principal-bio">
               Dedicated to placing quality property in the Mohali tri-city. We specialize in residential, commercial and land mandates — known for thorough consultancy and transparent guidance from discovery to closing.
             </p>
@@ -1073,12 +1073,12 @@ function Press() {
 /* ───────────────────── Reviews (replaces Journal) ───────────────────── */
 function Reviews() {
   const all = [
-    { name: "Aman Khurana",    initial: "A", stars: 5, time: "2 months ago", text: "Sachdeva Real Estate closed our SCO purchase end-to-end. From paperwork to registry, every detail was handled with extraordinary discretion. The most professional consultancy in the region." },
+    { name: "Aman Khurana",    initial: "A", stars: 5, time: "2 months ago", text: "Property Scanners closed our SCO purchase end-to-end. From paperwork to registry, every detail was handled with extraordinary discretion. The most professional consultancy in the region." },
     { name: "Priya Malhotra",   initial: "P", stars: 5, time: "3 weeks ago", text: "The title memo was a revelation — we understood everything about the property before we signed. Rare to find this level of care in Indian real estate." },
     { name: "Rohit Sandhu",     initial: "R", stars: 5, time: "1 month ago", text: "The team found us a kothi in Sector 91 that wasn't on any portal. Their relationships and market knowledge are clearly exceptional." },
     { name: "Neha Bedi",        initial: "N", stars: 5, time: "5 days ago",  text: "From the UK we trusted them blind for our NRI investment. The quarterly photographic reports and rental management have been faultless." },
     { name: "Karan Gupta",      initial: "K", stars: 5, time: "2 weeks ago", text: "Walked in for one plot, walked out understanding the entire Mohali market. Honest, patient, no hard sell — only counsel." },
-    { name: "Sunita Puri",      initial: "S", stars: 5, time: "1 month ago", text: "Three transactions with Sachdeva Real Estate now. Their word is genuinely their bond. Wouldn't dream of going elsewhere." },
+    { name: "Sunita Puri",      initial: "S", stars: 5, time: "1 month ago", text: "Three transactions with Property Scanners now. Their word is genuinely their bond. Wouldn't dream of going elsewhere." },
     { name: "Vikram Ahuja",     initial: "V", stars: 5, time: "6 weeks ago", text: "The investment memo for our Sector 67 SCO was the kind of due diligence I'd expect from a top-tier law firm. Beautifully laid out." },
     { name: "Ananya Rana",      initial: "A", stars: 5, time: "3 months ago", text: "The quietest, classiest property desk in the tri-city. They place capital, they don't sell square feet." },
     { name: "Manjit Bhullar",   initial: "M", stars: 5, time: "4 months ago", text: "GMADA plot paperwork can be a nightmare. The desk handled mutation, dues and conveyance without me having to step into an office once." },
@@ -1132,7 +1132,7 @@ function ReviewCard({ r }) {
         </div>
         <div className="rv-stars" aria-label={r.stars + " stars"}>
           {Array.from({ length: r.stars }).map((_, i) => (
-            <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill="#c89a3c"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21.1 7 14.2 2 9.3l6.9-1z"/></svg>
+            <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill="#D4AF37"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21.1 7 14.2 2 9.3l6.9-1z"/></svg>
           ))}
         </div>
       </div>
@@ -1182,12 +1182,12 @@ function About() {
       <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 56, alignItems: "flex-start" }}>
         <div className="about-photo-col" style={{ display: "flex", flexDirection: "column", gap: 20, maxWidth: 360, width: "100%", justifySelf: "start" }}>
           <div className="gs-wrap" style={{ aspectRatio: "4/5", borderRadius: 999, overflow: "hidden", position: "relative", background: "#1a1714", width: "100%" }}>
-            <div className="gs" style={{ position: "absolute", inset: 0, backgroundImage: "url(assets/sachdeva-about.jpg)", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} />
+            <div className="gs" style={{ position: "absolute", inset: 0, backgroundImage: "url(assets/ps-about.jpg)", backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat" }} />
           </div>
 
-          <div style={{ border: "1px solid var(--line)", borderRadius: 6, padding: "20px 22px", background: "var(--paper)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14 }}>
+          <div style={{ border: "1px solid var(--line)", borderRadius: 8, padding: "20px 22px", background: "var(--paper)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14 }}>
             <div>
-              <div className="clash" style={{ fontSize: 19, letterSpacing: "-0.02em", fontWeight: 600, lineHeight: 1.1 }}>Sachdeva Real Estate</div>
+              <div className="clash" style={{ fontSize: 19, letterSpacing: "-0.02em", fontWeight: 600, lineHeight: 1.1 }}>Property Scanners</div>
               <div className="uc" style={{ fontSize: 10, color: "var(--mute)", letterSpacing: "0.16em", marginTop: 6 }}>Property Experts · Mohali</div>
             </div>
             <svg width="74" height="40" viewBox="0 0 120 60" fill="none" aria-hidden="true">
@@ -1197,15 +1197,15 @@ function About() {
           </div>
 
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Sachdeva+Real+Estate+ALC+Market+District+One+Sector+68+Mohali"
+            href="https://www.google.com/maps/search/?api=1&query=Property Scanners+Real+Estate+ALC+Market+District+One+Sector+68+Mohali"
             target="_blank" rel="noopener noreferrer"
-            onClick={(e) => { e.preventDefault(); window.open("https://www.google.com/maps/search/?api=1&query=Sachdeva+Real+Estate+ALC+Market+District+One+Sector+68+Mohali", "_blank", "noopener,noreferrer"); }}
+            onClick={(e) => { e.preventDefault(); window.open("https://www.google.com/maps/search/?api=1&query=Property Scanners+Real+Estate+ALC+Market+District+One+Sector+68+Mohali", "_blank", "noopener,noreferrer"); }}
             className="gs-wrap"
-            style={{ position: "relative", display: "block", aspectRatio: "16/10", borderRadius: 6, overflow: "hidden", background: "#1e1e1e" }}
+            style={{ position: "relative", display: "block", aspectRatio: "16/10", borderRadius: 8, overflow: "hidden", background: "#161616" }}
           >
-            <div className="gs" style={{ position: "absolute", inset: 0, backgroundImage: "url(assets/sachdeva-about.jpg)", backgroundSize: "cover", backgroundPosition: "center", filter: "grayscale(0.2)" }} />
+            <div className="gs" style={{ position: "absolute", inset: 0, backgroundImage: "url(assets/ps-about.jpg)", backgroundSize: "cover", backgroundPosition: "center", filter: "grayscale(0.2)" }} />
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.65) 100%)" }} />
-            <div style={{ position: "absolute", left: 16, right: 16, bottom: 14, color: "#f6f6f6", display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 12 }}>
+            <div style={{ position: "absolute", left: 16, right: 16, bottom: 14, color: "#FAFAFA", display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 12 }}>
               <div>
                 <div className="uc" style={{ fontSize: 9, letterSpacing: "0.18em", opacity: 0.8 }}>The Office</div>
                 <div className="clash" style={{ fontSize: 15, letterSpacing: "-0.02em", marginTop: 4, fontWeight: 600 }}>ALC Market, District One · Sector 68 · Mohali</div>
@@ -1218,7 +1218,7 @@ function About() {
         <div>
           <div className="uc" style={{ fontSize: 11, letterSpacing: "0.18em", color: "var(--mute)", marginBottom: 24 }}>◇ About Us</div>
           <p className="clash" style={{ fontSize: "clamp(24px, 3.6vw, 48px)", letterSpacing: "-0.035em", lineHeight: 1.15, margin: 0, fontWeight: 500 }}>
-            Sachdeva Real Estate is a <span className="serif-it">GMADA</span> empanelled and <span className="serif-it">RERA</span> registered firm specializing in residential, commercial and land mandates across the Mohali tri-city. Operating from ALC Market, District One in Sector 68.
+            Property Scanners is a <span className="serif-it">GMADA</span> empanelled and <span className="serif-it">RERA</span> registered firm specializing in residential, commercial and land mandates across the Mohali tri-city. Operating from ALC Market, District One in Sector 68.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 24, marginTop: 36, borderTop: "1px solid var(--line)", paddingTop: 28 }}>
             <Credit k="Practice" v="Residential · Commercial · Land" />
@@ -1262,7 +1262,7 @@ function DeskBanner() {
             </div>
             <div className="desk-row">
               <div className="desk-row-k">By message</div>
-              <div className="desk-row-v"><a href="mailto:info@sachdevarealestate.in">info@sachdevarealestate.in</a></div>
+              <div className="desk-row-v"><a href="mailto:info@propertyscanners.in">info@propertyscanners.in</a></div>
             </div>
             <div className="desk-row">
               <div className="desk-row-k">In person</div>
@@ -1283,15 +1283,15 @@ function FooterMast() {
   return (
     <footer className="foot">
       <div className="container">
-        <h2 className="foot-mast">Sachdeva <em>Real Estate</em></h2>
+        <h2 className="foot-mast">Property Scanners <em>Real Estate</em></h2>
         <div className="foot-cols">
           <div>
             <div className="foot-h">The Desk</div>
             <ul className="foot-list">
               <li><a href="tel:+918968017508">+91 89680 17508</a></li>
-              <li><a href="mailto:info@sachdevarealestate.in">info@sachdevarealestate.in</a></li>
+              <li><a href="mailto:info@propertyscanners.in">info@propertyscanners.in</a></li>
               <li><span>ALC Market, District One</span></li>
-              <li><span>Sector 68 · Mohali · 160062</span></li>
+              <li><span>Airport Road, Sector 79, Mohali 160062</span></li>
             </ul>
           </div>
           <div>
@@ -1320,7 +1320,7 @@ function FooterMast() {
             <div className="foot-h">Elsewhere</div>
             <ul className="foot-list">
               <li><a href="https://www.instagram.com/thegreater.mohali/" target="_blank" rel="noopener noreferrer">Instagram · @thegreater.mohali</a></li>
-              <li><a href="https://www.youtube.com/@sachdevarealestate" target="_blank" rel="noopener noreferrer">YouTube · @sachdevarealestate</a></li>
+              <li><a href="https://www.youtube.com/@propertyscanners" target="_blank" rel="noopener noreferrer">YouTube · @propertyscanners</a></li>
               <li><a href="https://wa.me/918968017508" target="_blank" rel="noopener noreferrer">WhatsApp · Direct line</a></li>
             </ul>
           </div>
@@ -1328,7 +1328,7 @@ function FooterMast() {
         <div className="foot-bottom">
           <div className="foot-mark">
             <Crown />
-            <span>© 2026 Sachdeva Real Estate · All rights reserved</span>
+            <span>© 2026 Property Scanners · All rights reserved</span>
           </div>
           <div>PB-RERA · GMADA · JLPL Empanelled</div>
         </div>
@@ -1352,8 +1352,8 @@ function ContactBanner() {
           <div style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "flex-end" }}>
             <a href="tel:+918968017508" className="clash" style={{ fontSize: "clamp(22px,3.5vw,28px)", letterSpacing: "-0.02em", fontWeight: 600 }}>+91 89680 17508</a>
             <a href="https://wa.me/918968017508" target="_blank" rel="noopener noreferrer" style={{ fontSize: 16, color: "var(--mute)" }}>WhatsApp · +91 89680 17508</a>
-            <a href="mailto:info@sachdevarealestate.in" className="uc" style={{ fontSize: 11, letterSpacing: "0.16em", marginTop: 8, borderBottom: "1px solid var(--ink)", paddingBottom: 4 }}>
-              info@sachdevarealestate.in
+            <a href="mailto:info@propertyscanners.in" className="uc" style={{ fontSize: 11, letterSpacing: "0.16em", marginTop: 8, borderBottom: "1px solid var(--ink)", paddingBottom: 4 }}>
+              info@propertyscanners.in
             </a>
           </div>
         </div>
@@ -1371,7 +1371,7 @@ function Footer() {
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
               <Crown dark />
-              <div className="clash" style={{ color: "#f6f6f6", fontSize: 20, letterSpacing: "-0.03em" }}>Sachdeva Real Estate</div>
+              <div className="clash" style={{ color: "#FAFAFA", fontSize: 20, letterSpacing: "-0.03em" }}>Property Scanners</div>
             </div>
             <p style={{ marginTop: 20, fontSize: 14, lineHeight: 1.65, maxWidth: 300 }}>
               Property consultants & investment experts to the Mohali tri-city. GMADA/RERA accredited. ALC Market, District One, Sector 68, Mohali, Punjab 160062.
@@ -1381,14 +1381,14 @@ function Footer() {
           <FooterCol head="Practice" links={[["Residential", "#"], ["Commercial", "#"], ["Land & Plots", "#"], ["NRI Services", "#"]]} />
           <FooterCol head="Contact" links={[
             [<span><IconPhone/> +91 89680 17508</span>, "tel:+918968017508"],
-            [<span><IconMail/> info@sachdevarealestate.in</span>, "mailto:info@sachdevarealestate.in"],
+            [<span><IconMail/> info@propertyscanners.in</span>, "mailto:info@propertyscanners.in"],
             [<span><IconPin/> ALC Market, Sector 68, Mohali</span>, "#"],
             [<span><IconInsta/> @thegreater.mohali</span>, "https://instagram.com/thegreater.mohali"],
-            [<span><IconYouTube/> @sachdevarealestate</span>, "https://www.youtube.com/@sachdevarealestate"],
+            [<span><IconYouTube/> @propertyscanners</span>, "https://www.youtube.com/@propertyscanners"],
           ]} />
         </div>
         <div style={{ borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 24, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-          <div className="uc" style={{ fontSize: 10, letterSpacing: "0.18em" }}>© 2026 Sachdeva Real Estate — All rights reserved</div>
+          <div className="uc" style={{ fontSize: 10, letterSpacing: "0.18em" }}>© 2026 Property Scanners — All rights reserved</div>
           <div className="uc" style={{ fontSize: 10, letterSpacing: "0.18em" }}>PB-RERA · GMADA · JLPL Empanelled</div>
         </div>
       </div>
@@ -1399,12 +1399,12 @@ function Footer() {
 function FooterCol({ head, links }) {
   return (
     <div>
-      <div className="uc" style={{ fontSize: 10, letterSpacing: "0.18em", color: "#f6f6f6", marginBottom: 18 }}>{head}</div>
+      <div className="uc" style={{ fontSize: 10, letterSpacing: "0.18em", color: "#FAFAFA", marginBottom: 18 }}>{head}</div>
       <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 12 }}>
         {links.map(([label, href], i) => (
           <li key={i}>
             <a href={href} style={{ fontSize: 14, color: "rgba(246,246,246,0.6)", display: "inline-flex", alignItems: "center", gap: 10, transition: "color 200ms" }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#f6f6f6")}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#FAFAFA")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(246,246,246,0.6)")}
             >{label}</a>
           </li>
@@ -1449,7 +1449,7 @@ function InstagramFab() {
 function WhatsAppFab() {
   const [hover, setHover] = useState(false);
   const phone = "918968017508";
-  const text = encodeURIComponent("Hello Sachdeva Real Estate — I would like to enquire about a property listing.");
+  const text = encodeURIComponent("Hello Property Scanners — I would like to enquire about a property listing.");
   return (
     <a
       href={`https://wa.me/${phone}?text=${text}`}

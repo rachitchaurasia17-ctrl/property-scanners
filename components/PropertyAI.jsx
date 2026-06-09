@@ -7,10 +7,10 @@
 const GROQ_KEY = ""; // Add your Groq API key here
 const GROQ_MODEL = "llama-3.3-70b-versatile";
 
-const SYSTEM_PROMPT = `You are Property AI, the digital concierge for Sachdeva Real Estate — a trusted property consultancy in the Mohali tri-city (Mohali, Chandigarh, Zirakpur, Kharar, New Chandigarh).
+const SYSTEM_PROMPT = `You are Property AI, the digital concierge for Property Scanners — a trusted property consultancy in the Mohali tri-city (Mohali, Chandigarh, Zirakpur, Kharar, New Chandigarh).
 
 Firm facts:
-- Firm: Sachdeva Real Estate
+- Firm: Property Scanners
 - Office: ALC Market, District One, Sector 68, Mohali, Punjab 160062
 - Phone: +91 89680 17508
 - GMADA empanelled, RERA registered (PB-RERA)
