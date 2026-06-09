@@ -11,14 +11,14 @@
                     blur) into the landing page.
      4. 'gone'    — unmounts and calls onDone().
 
-   Customised for SACHDEVA REAL ESTATE (white room, brand phrase).
+   Customised for PROPERTY SCANNERS (white room, brand phrase).
 */
 
 /* ── CONSTANTS (tune per client) ── */
 const DEPTH = 2600;            // room length in px
 const DURATION = 1800;         // flight duration in ms (shortened so the lockup lands sooner)
 const REVEAL_HOLD = 1200;      // brand hold before the page is revealed (ms)
-const PHRASE = 'SACHDEVA REAL ESTATE · '; // tiled on all 4 walls
+const PHRASE = 'PROPERTY SCANNERS · '; // tiled on all 4 walls
 const ROWS = 8;                // text rows per wall (denser = less whitespace)
 const REPEAT = 8;              // phrase repeats per row
 
@@ -118,7 +118,7 @@ function IntroTunnel({ onDone }) {
 
       {/* Brand lockup — hidden during flight, revealed on the white screen */}
       <div className="intro-center">
-        <div className="intro-logo"><span>SACHDEVA</span><span>REAL ESTATE</span></div>
+        <div className="intro-logo"><span>PROPERTY</span><span>SCANNERS</span></div>
         <div className="intro-rule" />
         <div className="intro-sub">Property Experts · Mohali</div>
       </div>
